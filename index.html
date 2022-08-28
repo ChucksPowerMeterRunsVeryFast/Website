@@ -2,6 +2,23 @@
 
 	<html>
 
+		<script>
+			var bell=true
+			window.onclick = () => {
+				if (bell){
+					bell=!bell
+					let soundSource = "https://cdn.discordapp.com/attachments/1013266056179109908/1013281968026300477/Hector_Salamanca._DING._Breaking_Bad.mp3";
+					let sound = new Audio(soundSource);
+					sound.play();
+					sound.onended = () => {
+						bell=true
+					}
+				}
+
+			}
+
+		</script>
+
 		<head>
 			<title>
 				On todays episode of AMC's Better Call Saul
@@ -26,6 +43,10 @@
 			<img src = "https://cdn.discordapp.com/attachments/1013266056179109908/1013266329857433630/whitedrake.jpg">
 
 			<hr>
+			
+			<button>
+				<img src = "https://cdn.discordapp.com/attachments/1013266056179109908/1013280570568085524/unknown.png" onclick = bell()>
+			</button>
 			
 			<button>
    				<img src= "https://cdn.discordapp.com/attachments/1013266056179109908/1013266328703991848/chuck.jpg" onclick = window.open("http://savewalterwhite.com") alt="After a nice day dewiring the house"> 
